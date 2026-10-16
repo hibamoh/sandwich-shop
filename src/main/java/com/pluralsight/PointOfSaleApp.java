@@ -4,5 +4,15 @@ import java.util.Scanner;
 public class PointOfSaleApp {
     public static void main(String[] args) {
 
+        Scanner myScanner = new Scanner(System.in);
+
+        System.out.println("What sandwich would you like? ");
+        System.out.println("Option 1: Regular - $5.45 Option 2: Large - $8.95");
+
+        String sandwichType = myScanner.nextLine();
+
+
+
+
     }
 }
