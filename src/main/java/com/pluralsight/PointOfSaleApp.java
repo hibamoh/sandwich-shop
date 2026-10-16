@@ -3,6 +3,7 @@ import java.util.Scanner;
 
 public class PointOfSaleApp {
     public static void main(String[] args) {
+        double total;
 
         Scanner myScanner = new Scanner(System.in);
 
@@ -16,18 +17,22 @@ public class PointOfSaleApp {
         if(age < 17){
             System.out.println("You receive a 10% disc");
             if(sandwichType.equalsIgnoreCase("option 1")){
-                System.out.println("Your total is $" + (5.95 -(0.10 * 5.45)));
+                total = (5.45 -(0.10 * 5.45));
+                System.out.printf("Your total is $%.2f%n" , total );
             }
             else {
-                System.out.println("Your total is $" + (8.95-(0.10 * 8.95)));
+                total = (8.95-(0.10 * 8.95));
+                System.out.printf("Your total is $%.2f%n" , total);
             }
         } else if (age > 65) {
             System.out.println("You receive a 20% disc");
             if (sandwichType.equalsIgnoreCase("option 1")){
-                System.out.println("Your total is $" + (5.95-(0.20 * 5.95)));
+                total = (5.45-(0.20 * 5.45));
+                System.out.printf("Your total is $%.2f%n" ,total );
             }
             else {
-                System.out.println("Your total is $" + (8.95-(0.20 * 8.95)));
+                total = (8.95-(0.20 * 8.95));
+                System.out.printf("Your total is $%.2f%n" , total);
             }
 
         }
