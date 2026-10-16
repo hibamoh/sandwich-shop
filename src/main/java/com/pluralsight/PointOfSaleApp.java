@@ -17,11 +17,14 @@ public class PointOfSaleApp {
             System.out.println("You receive a 10% disc");
             if(sandwichType.equalsIgnoreCase("option 1")){
                 System.out.println("Your total is $" + (0.10 * 5.45));
-
             }
+            else {
+                System.out.println("Your total is $" + (0.10 * 8.95));
+            }
+        } else if (age > 65) {
+            System.out.println("You recieve");
 
         }
-
 
     }
 }
