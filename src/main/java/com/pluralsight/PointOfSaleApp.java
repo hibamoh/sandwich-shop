@@ -14,6 +14,9 @@ public class PointOfSaleApp {
         System.out.println("How old are you? ");
         int age = myScanner.nextInt();
 
+        System.out.println("Do you want the sandwich loaded? (yes / no)");
+        String loadedOrNot = myScanner.nextLine();
+
         if(age < 17){
             System.out.println("You receive a 10% disc");
             if(sandwichType.equalsIgnoreCase("option 1")){
