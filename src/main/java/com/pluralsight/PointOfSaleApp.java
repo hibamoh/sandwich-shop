@@ -39,6 +39,25 @@ public class PointOfSaleApp {
             System.out.println("no discount for you!");
         }
 
+        if (sandwichType == 1){
+            if(loadedOrNot.equalsIgnoreCase("yes")){
+                total = regularSandwich + loadedReg;
+                System.out.printf("your total will be $%.2f%n ",total);
+            } else {
+                total = regularSandwich;
+            }
+        }
+        else if (sandwichType==2){
+            if (loadedOrNot.equalsIgnoreCase("yes")){
+                total = largeSandwich + loadedLarge;
+            }
+            else {
+                total = largeSandwich;
+            }
+        }
+
+
+
 
     }
 
