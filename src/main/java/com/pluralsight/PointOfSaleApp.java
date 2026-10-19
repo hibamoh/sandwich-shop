@@ -32,48 +32,58 @@ public class PointOfSaleApp {
                 if (loadedOrNot.equalsIgnoreCase("yes")) {
                     newPrice = ((regularSandwich + loadedReg) - (minorDisc * (regularSandwich + loadedReg)));
                     System.out.printf("your total is $%.2f%n ", newPrice);
-                }
-                else {
+                } else {
                     newPrice = ((regularSandwich - (minorDisc * regularSandwich)));
                     System.out.printf("your total is $%.2f%n ", newPrice);
                 }
-            }
-            else if (sandwichType.equalsIgnoreCase("option 2")){
+            } else if (sandwichType.equalsIgnoreCase("option 2")) {
                 if (loadedOrNot.equalsIgnoreCase("yes")) {
                     newPrice = ((largeSandwich + loadedLarge) - (minorDisc * (largeSandwich + loadedLarge)));
                     System.out.printf("your total is $%.2f%n ", newPrice);
-            }
-                else {
+                } else {
                     newPrice = ((largeSandwich - (minorDisc * largeSandwich)));
                     System.out.printf("your total is $%.2f%n ", newPrice);
                 }
 
 
-        } else if (age > 65) {
-            System.out.println("You receive a 20% disc");
-            if (sandwichType.equalsIgnoreCase("option 1")) {
-                if (loadedOrNot.equalsIgnoreCase("yes")) {
-                    newPrice = ((regularSandwich + loadedReg) - (seniorDisc * (regularSandwich + loadedReg)));
-                    System.out.printf("your total is $%.2f%n ", newPrice);
-                } else {
-                    newPrice = (regularSandwich - (seniorDisc * minorDisc));
-                    System.out.printf("your total is $%.2f%n ", newPrice);
-                }
-
-            }
-        } else {
+            } else if (age > 65) {
+                System.out.println("You receive a 20% disc");
                 if (sandwichType.equalsIgnoreCase("option 1")) {
-                    if (loadedOrNot.equalsIgnoreCase("yes")){
-                    newPrice = (regularSandwich + loadedReg);
-                    System.out.printf("your total is $%.2f%n ", newPrice);
-                }
-            }
-                else if (sandwichType.equalsIgnoreCase("option1")){
-                    if (loadedOrNot.equalsIgnoreCase("yes")){
-                        newPrice = (la)
+                    if (loadedOrNot.equalsIgnoreCase("yes")) {
+                        newPrice = ((regularSandwich + loadedReg) - (seniorDisc * (regularSandwich + loadedReg)));
+                        System.out.printf("your total is $%.2f%n ", newPrice);
+                    } else {
+                        newPrice = (regularSandwich - (seniorDisc * regularSandwich));
+                        System.out.printf("your total is $%.2f%n ", newPrice);
+                    }
+
+                } else if (sandwichType.equalsIgnoreCase("option 2")) {
+                    if (loadedOrNot.equalsIgnoreCase("yes")) {
+                        newPrice = ((largeSandwich + loadedLarge) - (seniorDisc * (largeSandwich + loadedLarge)));
+                        System.out.printf("your total is $%.2f%n ", newPrice);
+                    } else {
+                        newPrice = ((largeSandwich - (seniorDisc * largeSandwich)));
+                        System.out.printf("your total is $%.2f%n ", newPrice);
+                    }
+
+                } else {
+                    if (sandwichType.equalsIgnoreCase("option 1")) {
+                        if (loadedOrNot.equalsIgnoreCase("yes")) {
+                            newPrice = (regularSandwich + loadedReg);
+                            System.out.printf("your total is $%.2f%n ", newPrice);
+                        }
+                    } else if (sandwichType.equalsIgnoreCase("option 2")) {
+                        if (loadedOrNot.equalsIgnoreCase("yes")) {
+                            newPrice = (largeSandwich + loadedLarge);
+                            System.out.printf("your total is $%.2f%n ", newPrice);
+                        }
+                        else {
+                            newPrice = ((largeSandwich - (seniorDisc * largeSandwich)));
+                            System.out.printf("your total is $%.2f%n ", newPrice);
+                        }
                     }
                 }
-                }
+            }
         }
     }
-
+}
